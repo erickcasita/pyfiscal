@@ -40,9 +40,10 @@ def remove_names(name):
 		'JOSE ', 'J ', 'MARIA ', 'MA. ', 'DE ', ' DE ', 'DEL ', ' DEL ', 'LA ', ' LA ',
 		'LAS ', ' LAS ', 'LOS ', ' LOS ', 'MC ', 'MC ', 'MAC ', 'VON ', 'VAN ', ' Y '
 	)
-	
 	for item in names:
-		data = name.replace(item, '')
+		#Fixed! remove_names was not working!!! 
+		if (item in name):
+		    data = name.replace(item, '')
 	return data
 
 def remove_precisions(word):
